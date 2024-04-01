@@ -10,9 +10,9 @@ GitHub Actions 实现 [GLaDOS][glados] 自动签到
 
 3. 添加Repository secrets。打开设置（Settings）下滑找到Secrets and variables，在Repository secrets中执行下述操作
 
-（1）添加 Cookie 到 Secret `GLADOS_COOKIE`
+（1）添加 Cookie 到 Secret的`GLADOS_COOKIE`
 
-（2）添加 GLADOS_AUTHORIZATION 到 Secret `GLADOS_AUTHORIZATION`
+（2）添加 Authorization 到 Secret的`GLADOS_AUTHORIZATION`
 
 4. 在Actions处点击run工作流, 选择Enable workflow启动，预计每天北京时间 06.00 左右自动签到
 
