@@ -2,17 +2,17 @@
 
 GitHub Actions 实现 [GLaDOS][glados] 自动签到
 
-([GLaDOS][glados] 可用邀请码: `MW4DK-O0RSF-C7AOU-EN1MP`, 双方都有奖励天数)
-
 ## 使用说明
 
-1. Fork 这个仓库
+1. Fork 这个仓库到本地
 
-1. 登录 [GLaDOS][glados] 获取 Cookie
+2. 登录 [GLaDOS][glados] 中的签到，打开控制台切到网络（network），点击签到。 观察点击行为后产生的网络请求：checkin和status， 随便点击一个请求，查看请求头获取 Cookie 和 Authorization
 
-1. 添加 Cookie 到 Secret `GLADOS`
+3. 添加Repository secrets。打开设置（Settings）下滑找到Secrets and variables，在Repository secrets中执行下述操作
+3.1. 添加 Cookie 到 Secret `GLADOS_COOKIE`
+3.2. 添加 GLADOS_AUTHORIZATION 到 Secret `GLADOS_AUTHORIZATION`
 
-1. 启用 Actions, 每天北京时间 00:10 自动签到
+4. 在Actions处点击run工作流, 选择Enable workflow启动，预计每天北京时间 06.00 左右自动签到
 
 1. 如需推送通知, 可用 [PushPlus][pushplus], 添加 Token 到 Secret `NOTIFY`
 
