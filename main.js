@@ -40,6 +40,7 @@ const gladosRequestPush=async()=>{
 }
 
 const notify = async (contents) => {
+  const [title , ...contents]=contents
   const token = process.env.NOTIFY
   if (!token || !contents) return
   await fetch(`https://www.pushplus.plus/send`, {
@@ -47,7 +48,7 @@ const notify = async (contents) => {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       token,
-      title: contents[0],
+      title,
       content: contents.join('<br>'),
       template: 'markdown',
     }),
