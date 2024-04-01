@@ -39,7 +39,6 @@ const gladosRequestPush=async()=>{
   }
 }
 
-//进行pushplus信息推送
 const notify = async (contents) => {
   const token = process.env.NOTIFY
   if (!token || !contents) return
