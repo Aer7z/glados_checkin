@@ -34,7 +34,7 @@ const gladosRequestPush=async()=>{
     //返回值供pushplus使用
     return [
       'GLADOS 签到成功',
-      `leftDays:${Number(status.data.leftDays)} `,
+      `剩余天数:${Number(status.data.leftDays)} `,
       `签到消息:${checkin.message} `,
       `总点数:${Number(checkin.list[0].balance)}`
     ]
